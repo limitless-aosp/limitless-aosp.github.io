@@ -17,6 +17,25 @@
 <body>
     <header>
         <style>
+            @media screen and (max-width: 430px) {
+                #pBox {
+                    width: 360px;
+                    height: 128px;
+                }
+
+                #md-button-box {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                #pBox {
+                    width: 680px;
+                    height: 72px;
+                }
+            }
+
             /* screenshot styles */
             #screenshot {
                 position: absolute;
@@ -277,14 +296,17 @@
         <div id="version">
             <script src="../bundel.js"></script>
             <script type="module" src="../index.js"></script>
+
             <div id="md-button-box">
-                <md-filled-button>
-                    <svg width="16" height="16" viewBox="0 0 16" slot="icon">
-                        <path
-                            d="M5.87 1a1 1 0 0 0-.96.71L3.03 8.04c-.14.48.22.96.72.96h1.58l-1.28 4.39c-.38 1.31 1.33 2.2 2.18 1.13l6.6-8.3A.75.75 0 0 0 12.26 5h-2.03l1-2.65A1 1 0 0 0 10.27 1h-4.4Z" />
-                    </svg>
-                    Install for your device Now
-                </md-filled-button>
+                <div id="filled-button">
+                    <md-filled-button>
+                        <svg width="16" height="16" viewBox="0 0 16" slot="icon">
+                            <path
+                                d="M5.87 1a1 1 0 0 0-.96.71L3.03 8.04c-.14.48.22.96.72.96h1.58l-1.28 4.39c-.38 1.31 1.33 2.2 2.18 1.13l6.6-8.3A.75.75 0 0 0 12.26 5h-2.03l1-2.65A1 1 0 0 0 10.27 1h-4.4Z" />
+                        </svg>
+                        Install for your device Now
+                    </md-filled-button>
+                </div>
                 <md-filled-tonal-button>Learn More</md-filled-tonal-button>
                 <md-filled-tonal-button>Blog</md-filled-tonal-button>
             </div>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimitlessAOSP - error : 404 page not found</title>
+    <!-- Material Color CSS-->
+    <link rel="stylesheet" type="text/css" href="../css/style_normal.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="icon" href="../img/logo.png">
+</head>
+<style>
+
+</style>
+
+<body>
+    <header>
+        <style>
+            h404 {
+                font-family: 'MabryProL';
+                font-size: 72px;
+                color: var(--md-sys-color-on-background);
+            }
+
+            h1 {
+                font-family: 'MabryProR';
+                font-size: 32px;
+                font-weight: normal;
+                color: var(--md-sys-color-on-background);
+            }
+
+            body {
+                height: 100vh;
+            }
+
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 85%;
+                box-sizing: border-box;
+                justify-content: flex-end;
+                gap: 20%;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-sizing: border-box;
+                justify-content: center;
+            }
+        </style>
+        <input type="checkbox" id="toggler">
+
+        <label for="toggler">
+            <span class="hambuger-container">
+                <span></span>
+            </span>
+        </label>
+
+        <dialog class="nav-items">
+            <div class="list" data-style="primary">
+                <li data-style="tertiary" onclick="location.href='./about/index.html'">
+                    <p3 data-style="primary">About</p3>
+                    <p3 data-style="tertiary">About this project & our team.</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./introduce/more/index.html'">
+                    <p3 data-style="primary">Introduce</p3>
+                    <p3 data-style="tertiary">Intro for the last alpha version: 14(More)</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./device/index.html'">
+                    <p3 data-style="primary">Devices</p3>
+                    <p3 data-style="tertiary">Search & Download your device ROMs</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./design/index.html'">
+                    <p3 data-style="primary">Design</p3>
+                    <p3 data-style="tertiary">Learn about our design & fonts or any other</p3>
+                </li>
+            </div>
+            <div id="secondary">
+                <div class="list" data-style="secondary">
+                    <li data-style="secondary" onclick="location.href='https://github.com/LimitLess-AOSP'"
+                        cursor="pointer"><span>→</span><span>Github</span></li>
+                    <li data-style="secondary"><span>→</span><span>Telegram</span></li>
+                    <li data-style="secondary"><span>→</span><span>Blog</span></li>
+                </div>
+                <div class="p2box">
+                    <div class="p2">Limitless Studio. 2024</div>
+                    <div class="p2">Some content does not represent the final product.</div>
+                </div>
+            </div>
+        </dialog>
+    </header>
+    <div id="main">
+        <div class="title">
+            <h404>404</h404>
+            <h1>PAGE NOT FOUND</h1>
+        </div>
+        <div class="btnBox">
+            <script src="../bundel.js"></script>
+            <script type="module" src="../index.js"></script>
+            <div id="md-button-box">
+                <md-filled-button>
+                    Back to home page
+                </md-filled-button>
+                <md-filled-tonal-button>Send feedback</md-filled-tonal-button>
+            </div>
+        </div>
+        <md-text-button width="128px;">
+            <div id="nowdate"></div>
+        </md-text-button>
+    </div>
+</body>
+
+
+</html>
