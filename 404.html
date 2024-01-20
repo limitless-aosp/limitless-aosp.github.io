@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LimitlessAOSP - error : 404 page not found</title>
+    <title>LimitlessAOSP - 404 Page not found</title>
     <!-- Material Color CSS-->
-    <link rel="stylesheet" type="text/css" href="../css/style_normal.css">
-    <link rel="stylesheet" type="text/css" href="../css/menu.css">
-    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" type="text/css" href="./css/style_normal.css">
+    <link rel="stylesheet" type="text/css" href="./css/menu.css">
+    <link rel="icon" href="./img/logo_error.png">
 </head>
 <style>
 
@@ -17,17 +17,48 @@
 <body>
     <header>
         <style>
+            @media (prefers-color-scheme: light) {
+                :root {
+                    --md-sys-color-primary: rgb(186 26 26);
+                    --md-sys-color-on-primary: rgb(255 255 255);
+                    --md-sys-color-primary-container: rgb(255 218 214);
+                    --md-sys-color-on-primary-container: rgb(65 0 2);
+                    --md-sys-color-background: rgb(233, 226, 227);
+                    --md-sys-color-on-background: rgb(24, 18, 18);
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --md-sys-color-primary: rgb(255 180 171);
+                    --md-sys-color-on-primary: rgb(105 0 5);
+                    --md-sys-color-primary-container: rgb(147 0 10);
+                    --md-sys-color-on-primary-container: rgb(255 218 214);
+                    --md-sys-color-background: rgb(24, 18, 18);
+                    --md-sys-color-on-background: rgb(233, 226, 227);
+                }
+
+            }
+
+            #nowdate {
+                font-size: 14px;
+                color: var(--md-sys-color-primary);
+                opacity: 0.5;
+            }
+
             h404 {
-                font-family: 'MabryProL';
+                font-family: 'SpaceGrotesk';
+                font-weight: 300;
                 font-size: 72px;
-                color: var(--md-sys-color-on-background);
+                color: var(--md-sys-color-primary);
             }
 
             h1 {
-                font-family: 'MabryProR';
+                font-family: 'SpaceGrotesk';
                 font-size: 32px;
                 font-weight: normal;
                 color: var(--md-sys-color-on-background);
+                margin: 2px;
             }
 
             body {
@@ -51,6 +82,13 @@
                 box-sizing: border-box;
                 justify-content: center;
             }
+
+            .md-button-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
         </style>
         <input type="checkbox" id="toggler">
 
@@ -62,19 +100,19 @@
 
         <dialog class="nav-items">
             <div class="list" data-style="primary">
-                <li data-style="tertiary" onclick="location.href='./about/index.html'">
+                <li data-style="tertiary" onclick="location.href='./about.html'">
                     <p3 data-style="primary">About</p3>
                     <p3 data-style="tertiary">About this project & our team.</p3>
                 </li>
-                <li data-style="tertiary" onclick="location.href='./introduce/more/index.html'">
+                <li data-style="tertiary" onclick="location.href='./introduce.html'">
                     <p3 data-style="primary">Introduce</p3>
                     <p3 data-style="tertiary">Intro for the last alpha version: 14(More)</p3>
                 </li>
-                <li data-style="tertiary" onclick="location.href='./device/index.html'">
+                <li data-style="tertiary" onclick="location.href='./device.html'">
                     <p3 data-style="primary">Devices</p3>
                     <p3 data-style="tertiary">Search & Download your device ROMs</p3>
                 </li>
-                <li data-style="tertiary" onclick="location.href='./design/index.html'">
+                <li data-style="tertiary" onclick="location.href='./design.html'">
                     <p3 data-style="primary">Design</p3>
                     <p3 data-style="tertiary">Learn about our design & fonts or any other</p3>
                 </li>
@@ -101,16 +139,14 @@
         <div class="btnBox">
             <script src="../bundel.js"></script>
             <script type="module" src="../index.js"></script>
-            <div id="md-button-box">
-                <md-filled-button>
-                    Back to home page
-                </md-filled-button>
-                <md-filled-tonal-button>Send feedback</md-filled-tonal-button>
-            </div>
+            <md-filled-button onClick="javascript:history.back()">
+                Back to Last page
+            </md-filled-button>
         </div>
-        <md-text-button width="128px;">
+        <div class="md-button-box">
+            <md-text-button onclick="location.href='https://github.com/LimitLess-AOSP'">Send feedback</md-text-button>
             <div id="nowdate"></div>
-        </md-text-button>
+        </div>
         <!--CLOCK-->
         <script>
 

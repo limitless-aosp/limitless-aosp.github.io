@@ -155,15 +155,22 @@ label {
 
 p3[data-style="primary"] {
     font-size: 32px;
-    font-family: 'MabryProL';
+    font-family: 'SpaceGrotesk';
     color: var(--md-sys-color-on-background);
     display: flex;
-    font-weight: normal;
+    font-weight: 300;
+    opacity: 0.75;
+    transition: all .1s ease-in-out;
+}
+
+p3[data-style="primary"]:hover {
+    font-weight: 500;
+    opacity: 1;
 }
 
 li[data-style="secondary"] {
     font-size: 18px;
-    font-family: 'Limitless Sans';
+    font-family: 'SpaceGrotesk';
     font-weight: 300;
     color: var(--md-sys-color-on-background);
     display: flex;
@@ -183,7 +190,8 @@ li[data-style="secondary"]:hover {
 
 li[data-style="tertiary"] {
     font-size: 18px;
-    font-family: 'Limitless Sans';
+    font-family: 'SpaceGrotesk';
+    font-weight: 300;
     color: var(--md-sys-color-on-background);
     display: flex;
     font-weight: normal;
@@ -193,7 +201,7 @@ li[data-style="tertiary"] {
 
 p3[data-style="tertiary"] {
     font-size: 16px;
-    font-family: 'Limitless Sans';
+    font-family: 'SpaceGrotesk';
     color: var(--md-sys-color-on-background);
     display: flex;
     font-weight: 300;
@@ -202,7 +210,7 @@ p3[data-style="tertiary"] {
 }
 
 p3[data-style="tertiary"]:hover {
-    font-weight: 400;
+    font-weight: 500;
     opacity: 1;
 }
 

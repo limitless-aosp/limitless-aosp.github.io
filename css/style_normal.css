@@ -19,23 +19,13 @@
 }
 
 @font-face {
-    font-family: Limitless Sans;
+    font-family: Figtree;
     src: url(../fonts/Figtree-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: MabryProL;
-    src: url(../fonts/MabryPro-Light.woff2);
-}
-
-@font-face {
-    font-family: MabryProR;
-    src: url(../fonts/MabryPro-Regular.woff2);
-}
-
-@font-face {
-    font-family: MabryProM;
-    src: url(../fonts/MabryPro-Medium.woff2);
+    font-family: SpaceGrotesk;
+    src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
 @media (prefers-color-scheme: light) {
@@ -150,8 +140,8 @@
 }
 
 :root {
-    --md-ref-typeface-brand: 'Limitless Sans';
-    --md-ref-typeface-plain: 'Limitless Sans';
+    --md-ref-typeface-brand: 'Figtree';
+    --md-ref-typeface-plain: 'Figtree';
     --md-sys-typescale-body-medium-size: 1rem;
     --md-sys-typescale-display-medium-size: 1rem;
     --md-sys-typescale-headline-medium-size: 1rem;
@@ -165,7 +155,7 @@
 @media (min-width: 0px) and (max-width:768px) {}
 
 body {
-    font-family: 'Limitless Sans';
+    font-family: 'Figtree';
     margin: 0;
     padding: 0;
     --duration: 0.5s;
@@ -179,7 +169,7 @@ body {
 }
 
 html {
-    font-family: 'Limitless Sans';
+    font-family: 'Figtree';
     margin: 0;
     padding: 0;
     background-color: var(--md-sys-color-background);
@@ -205,8 +195,8 @@ html {
 }
 
 h9 {
-    font-family: 'MabryProL';
-    font-weight: 300;
+    font-family: 'SpaceGrotesk';
+    font-weight: 400;
     line-height: 72px;
     margin: 0;
     padding: 0;
@@ -217,14 +207,16 @@ h9 {
     background-image: linear-gradient(75deg, var(--md-sys-color-on-primary-container) 0%, var(--md-sys-color-on-primary-container) 33.33%, var(--md-sys-color-background) 50%, var(--md-sys-color-background) 100%);
     background-size: 300% 100%;
     background-position-x: calc(100% - var(--percentage));
-
+    letter-spacing: -2px;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
 span {
-    font-family: 'MabryProM';
+    font-family: 'SpaceGrotesk';
+    font-weight: 600;
+    letter-spacing: -1px;
 }
 
 #pBox {
@@ -235,7 +227,7 @@ span {
 }
 
 p9 {
-    font-family: 'MabryProR';
+    font-family: 'SpaceGrotesk';
     margin: 0;
     padding: 0;
     font-size: 18px;
