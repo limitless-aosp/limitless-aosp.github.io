@@ -1,0 +1,227 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+}
+
+#toggler {
+    display: none;
+}
+
+.hambuger-container {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 18px;
+}
+
+.hambuger-container span {
+    transform: rotate(45deg);
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-color: var(--md-sys-color-on-tertiary-container);
+    position: relative;
+    transition: all .25s ease-in-out;
+    top: 4px;
+    left: 4px;
+    border-radius: 4px;
+}
+
+.hambuger-container span:hover {
+    transform: rotate(0deg);
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-color: var(--md-sys-color-on-tertiary-container);
+    transition: all .25s ease-in-out;
+    top: 0;
+    left: 0;
+    border-radius: 24px;
+}
+
+.hambuger-container span:hover:active {
+    transform: rotate(0deg);
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-color: var(--md-sys-color-on-tertiary-container);
+    transition: all .1s ease-in-out;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+}
+
+#toggler:checked+label .hambuger-container {
+    transform: rotate(0deg);
+    display: block;
+    background-color: var(--md-sys-color-on-tertiary-container);
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    z-index: 6;
+}
+
+#toggler:checked+.hambuger-container {
+    transform: rotate(0deg);
+    display: block;
+    background-color: unset;
+    /* transition: transform .3s ease-in-out, top .3s ease-in-out .3s; */
+    border-radius: 6px;
+}
+
+header {
+    height: 64px;
+    background-color: unset;
+    padding: 0 18px;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    box-sizing: border-box;
+    top: 100vh;
+    transition: opacity .3s ease-in-out;
+    transform-origin: 1 0;
+    backdrop-filter: blur(50px);
+    flex-direction: column;
+    gap: 20px;
+    top: 0;
+    z-index: 4;
+    padding: 70px 20px 20px 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    transform: scaleY(0);
+}
+
+#toggler:checked~.nav-items {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+ul {
+    margin: 0;
+    height: 512px;
+    width: 256px;
+    box-sizing: border-box;
+    background-color: unset;
+    border-radius: 16px;
+    display: flex;
+    padding: 6px;
+    gap: 4px;
+    flex-direction: column;
+    position: sticky;
+}
+
+ul li {
+    color: #fff;
+    display: flex;
+}
+
+label {
+    z-index: 10;
+}
+
+.list[data-style="primary"] {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.list[data-style="secondary"] {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+p3[data-style="primary"] {
+    font-size: 32px;
+    font-family: 'MabryProL';
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    font-weight: normal;
+}
+
+li[data-style="secondary"] {
+    font-size: 18px;
+    font-family: 'Limitless Sans';
+    font-weight: 300;
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    font-weight: normal;
+    height: 48px;
+    width: 328px;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.75;
+    transition: all .1s ease-in-out;
+}
+
+li[data-style="secondary"]:hover {
+    gap: 16px;
+    opacity: 1;
+}
+
+li[data-style="tertiary"] {
+    font-size: 18px;
+    font-family: 'Limitless Sans';
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    font-weight: normal;
+    flex-direction: column;
+    gap: 8px;
+}
+
+p3[data-style="tertiary"] {
+    font-size: 16px;
+    font-family: 'Limitless Sans';
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    font-weight: 300;
+    opacity: 0.75;
+    transition: all .1s ease-in-out;
+}
+
+p3[data-style="tertiary"]:hover {
+    font-weight: 400;
+    opacity: 1;
+}
+
+.p2 {
+    font-size: 14px;
+    color: var(--md-sys-color-on-background);
+    /* text-align: end; */
+    /* width: 256px; */
+    opacity: 0.75;
+}
+
+.p2box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
