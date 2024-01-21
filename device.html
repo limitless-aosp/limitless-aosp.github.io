@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimitlessAOSP - Device</title>
+    <link rel="stylesheet" type="text/css" href="../css/univar.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="icon" href="../img/logo_tertiary.png">
+</head>
+<style>
+    h1 {
+        font-family: 'SpaceGrotesk';
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--md-sys-color-on-background);
+        margin: 0;
+    }
+
+    h2 {
+        font-family: 'SpaceGrotesk';
+        font-size: 26px;
+        font-weight: 350;
+        color: var(--md-sys-color-on-background);
+        opacity: 0.9;
+        margin: 0;
+    }
+
+    h3 {
+        font-family: 'Figtree';
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--md-sys-color-on-background);
+        opacity: 0.8;
+        margin: 0;
+        transition: all .1s ease-in-out;
+    }
+
+    h2:hover {
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    hlink {
+        font-family: 'Figtree';
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--md-sys-color-on-background);
+        opacity: 0;
+        margin: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    h2 hlink {
+        font-family: 'Figtree';
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--md-sys-color-on-background);
+        opacity: 0;
+        margin: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    h2:hover {
+        font-weight: 500;
+        color: var(--md-sys-color-on-background);
+        opacity: 1;
+        margin: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    h2:hover hlink {
+        font-weight: 500;
+        font-size: 18px;
+        color: var(--md-sys-color-on-background);
+        opacity: 0.5;
+        margin: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .main {
+        display: flex;
+        padding: 0px;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .md-device-card[module="k60"] {
+        background: var(--md-sys-color-surface);
+        border-radius: 12px;
+        width: 300px;
+        height: 275px;
+        transition: all .1s ease-in-out;
+    }
+
+    img[module="k60"] {
+        background: var(--md-sys-color-on-primary-fixed-variant);
+        border-radius: 12px;
+        background-size: cover;
+        transition: all .1s ease-in-out;
+    }
+
+    .md-device-card[module="k60"]:hover {
+        background: var(--md-sys-color-on-primary-fixed-variant);
+        transition: all .1s ease-in-out;
+    }
+
+    .md-device-card[module="k60"]:hover img[module="k60"] {
+        background: url("./img/devices/redmi/k60_hovered.png");
+        background-size: cover;
+        transition: all .1s ease-in-out;
+    }
+
+    .moduleNameBox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 12px 18px;
+    }
+
+    .moduleName {
+        font-family: 'SpaceGrotesk';
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--md-sys-color-on-background);
+    }
+
+    .moduleCode {
+        font-family: 'Figtree';
+        font-size: 14px;
+        font-weight: 300;
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-primary);
+        padding: 4px 6px;
+        border-radius: 4px;
+    }
+
+    .md-chip-set {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 18px;
+        align-items: center;
+    }
+
+    .md-device-card-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 18px;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <header>
+
+        <input type="checkbox" id="toggler">
+
+        <label for="toggler">
+            <span class="hambuger-container">
+                <span></span>
+            </span>
+        </label>
+
+        <dialog class="nav-items">
+            <div class="list" data-style="primary">
+                <li data-style="tertiary" onclick="location.href='./index.html'">
+                    <p3 data-style="primary">Home</p3>
+                    <p3 data-style="tertiary">The project overview</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./introduce.html'">
+                    <p3 data-style="primary">Introduce</p3>
+                    <p3 data-style="tertiary">About this project and our team.</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./device.html'">
+                    <p3 data-style="primary">Devices</p3>
+                    <p3 data-style="tertiary">Search & Download your device ROMs</p3>
+                </li>
+                <li data-style="tertiary" onclick="location.href='./news-wiki.html'">
+                    <p3 data-style="primary">News & Blog</p3>
+                    <p3 data-style="tertiary">Learn more about the new thing and blog</p3>
+                </li>
+            </div>
+            </div>
+            <div id="secondary">
+                <div class="list" data-style="secondary">
+                    <li data-style="secondary" onclick="location.href='https://github.com/LimitLess-AOSP'"
+                        cursor="pointer"><span>→</span><span>Github</span></li>
+                    <li data-style="secondary"><span>→</span><span>Telegram</span></li>
+                    <li data-style="secondary"><span>→</span><span>Design</span></li>
+                </div>
+                <div class="p2box">
+                    <div class="p2">Limitless Studio. 2024</div>
+                    <div class="p2">Some content does not represent the final product.</div>
+                </div>
+            </div>
+        </dialog>
+    </header>
+    <script src="../bundel.js"></script>
+    <script type="module" src="../index.js"></script>
+    <div class="main">
+        <div class="titleBox">
+            <hlink>#</hlink>
+            <h1>Devices</h1>
+        </div>
+        <div id="popular-device">
+            <div class="titleBox">
+                <hlink>#</hlink>
+                <h2>Popular Devices</h2>
+            </div>
+        </div>
+        <div id="all-device">
+            <div class="titleBox">
+                <hlink>#</hlink>
+                <h2>All Devices</h2>
+            </div>
+
+            <div class="md-chip-set">
+                <h3 id="dates-label">Brand</h3>
+                <md-filter-chip label="Xiaomi">Xiaomi</md-filter-chip>
+                <md-filter-chip label="Redmi">Redmi</md-filter-chip>
+                <md-filter-chip label="POCO">POCO</md-filter-chip>
+                <md-filter-chip label="Pixel">Pixel</md-filter-chip>
+            </div>
+            <div class="md-device-card-box">
+                <div class="md-device-card" module="k60">
+                    <img module="k60" width="300px" src="./img/devices/redmi/k60.png"></img>
+                    <div class="moduleNameBox">
+                        <div class="moduleName">Redmi K60</div>
+                        <div class="moduleCode">Mondrian</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LimitlessAOSP - 404 Page not found</title>
-    <!-- Material Color CSS-->
-    <link rel="stylesheet" type="text/css" href="./css/style_normal.css">
+    <link rel="stylesheet" type="text/css" href="./css/univar.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/menu.css">
     <link rel="icon" href="./img/logo_error.png">
 </head>
@@ -41,9 +41,11 @@
             }
 
             #nowdate {
+                font-family: 'JetBrainsMono';
                 font-size: 14px;
                 color: var(--md-sys-color-primary);
                 opacity: 0.5;
+                letter-spacing: -0.5px;
             }
 
             h404 {
@@ -99,34 +101,34 @@
         </label>
 
         <dialog class="nav-items">
-            <div class="list" data-style="primary">
-                <li data-style="tertiary" onclick="location.href='./about.html'">
-                    <p3 data-style="primary">About</p3>
-                    <p3 data-style="tertiary">About this project & our team.</p3>
-                </li>
-                <li data-style="tertiary" onclick="location.href='./introduce.html'">
-                    <p3 data-style="primary">Introduce</p3>
-                    <p3 data-style="tertiary">Intro for the last alpha version: 14(More)</p3>
-                </li>
-                <li data-style="tertiary" onclick="location.href='./device.html'">
-                    <p3 data-style="primary">Devices</p3>
-                    <p3 data-style="tertiary">Search & Download your device ROMs</p3>
-                </li>
-                <li data-style="tertiary" onclick="location.href='./design.html'">
-                    <p3 data-style="primary">Design</p3>
-                    <p3 data-style="tertiary">Learn about our design & fonts or any other</p3>
-                </li>
+                <div class="list" data-style="primary">
+                    <li data-style="tertiary" onclick="location.href='./index.html'">
+                        <p3 data-style="primary">Home</p3>
+                        <p3 data-style="tertiary">The project overview</p3>
+                    </li>
+                    <li data-style="tertiary" onclick="location.href='./introduce.html'">
+                        <p3 data-style="primary">Introduce</p3>
+                        <p3 data-style="tertiary">About this project and our team.</p3>
+                    </li>
+                    <li data-style="tertiary" onclick="location.href='./device.html'">
+                        <p3 data-style="primary">Devices</p3>
+                        <p3 data-style="tertiary">Search & Download your device ROMs</p3>
+                    </li>
+                    <li data-style="tertiary" onclick="location.href='./news-wiki.html'">
+                        <p3 data-style="primary">News & Blog</p3>
+                        <p3 data-style="tertiary">Learn more about the new thing and blog</p3>
+                    </li> 
+                </div>
             </div>
             <div id="secondary">
                 <div class="list" data-style="secondary">
                     <li data-style="secondary" onclick="location.href='https://github.com/LimitLess-AOSP'"
                         cursor="pointer"><span>→</span><span>Github</span></li>
                     <li data-style="secondary"><span>→</span><span>Telegram</span></li>
-                    <li data-style="secondary"><span>→</span><span>Blog</span></li>
+                    <li data-style="secondary"><span>→</span><span>Design</span></li>
                 </div>
                 <div class="p2box">
                     <div class="p2">Limitless Studio. 2024</div>
-                    <div class="p2">Some content does not represent the final product.</div>
                 </div>
             </div>
         </dialog>
@@ -140,11 +142,22 @@
             <script src="../bundel.js"></script>
             <script type="module" src="../index.js"></script>
             <md-filled-button onClick="javascript:history.back()">
-                Back to Last page
+                <svg slot="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm.28 14.53a.75.75 0 0 1-.98.07l-.08-.07-4-4a.75.75 0 0 1-.07-.98l.07-.08 4-4a.75.75 0 0 1 1.13.98l-.07.08-2.72 2.72h6.69c.38 0 .7.28.74.65l.01.1c0 .38-.28.7-.65.74l-.1.01H9.56l2.72 2.72c.27.27.3.68.07.98l-.07.08Z" />
+                </svg>
+                Back To Last Page
             </md-filled-button>
         </div>
         <div class="md-button-box">
-            <md-text-button onclick="location.href='https://github.com/LimitLess-AOSP'">Send feedback</md-text-button>
+            <md-text-button trailing-icon
+                onclick="location.href='https://github.com/LimitLess-AOSP/limitless-aosp.github.io/issues/new'">
+                <svg slot="icon" width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                        d="M9.75 4h.52a3.74 3.74 0 0 1 .2 7.5h-.71a.75.75 0 0 1-.12-1.49h.1l.53-.01c1.23 0 2.23-1 2.23-2.25 0-1.2-.92-2.17-2.08-2.24l-.15-.01h-.52a.75.75 0 0 1-.1-1.5h.62-.52Zm-4 0h.5a.75.75 0 0 1 .1 1.5h-.6A2.25 2.25 0 0 0 5.6 10h.65a.75.75 0 0 1 .1 1.5h-.6a3.75 3.75 0 0 1-.2-7.5h.7-.5Zm0 3h4.5a.75.75 0 0 1 .1 1.5h-4.6a.75.75 0 0 1-.1-1.5h4.6-4.5Z" />
+                </svg>
+                Send feedback
+            </md-text-button>
             <div id="nowdate"></div>
         </div>
         <!--CLOCK-->
