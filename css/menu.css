@@ -76,7 +76,7 @@ header {
     height: 64px;
     background-color: unset;
     padding: 0 18px;
-    z-index: 10;
+    z-index: 5;
     position: sticky;
     top: 0;
     left: 0;
@@ -116,6 +116,7 @@ body {
     transform: scaleY(1);
     opacity: 1;
     transition: opacity .3s ease-in-out;
+    z-index: 6;
 }
 
 ul {

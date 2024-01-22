@@ -18,28 +18,6 @@
         'opsz' 24
 }
 
-body {
-    font-family: 'Figtree';
-    margin: 0;
-    padding: 0;
-    --duration: 0.5s;
-    --timing: ease;
-    transition: background-color var(--duration) var(--timing), color var(--duration) var(--timing);
-    background-color: var(--md-sys-color-background);
-    height: 300vh;
-    gap: 24px;
-    user-select: none;
-    overflow-x: hidden;
-}
-
-html {
-    font-family: 'Figtree';
-    margin: 0;
-    padding: 0;
-    background-color: var(--md-sys-color-background);
-    Scrollbar-Face-Color: var(--md-sys-color-on-primary-container)
-}
-
 .label {
     overflow: hidden;
     display: flex;

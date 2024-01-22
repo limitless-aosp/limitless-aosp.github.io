@@ -6,158 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LimitlessAOSP - Device</title>
     <link rel="stylesheet" type="text/css" href="../css/univar.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/device.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="icon" href="../img/logo_tertiary.png">
 </head>
-<style>
-    h1 {
-        font-family: 'SpaceGrotesk';
-        font-size: 32px;
-        font-weight: 400;
-        color: var(--md-sys-color-on-background);
-        margin: 0;
-    }
-
-    h2 {
-        font-family: 'SpaceGrotesk';
-        font-size: 26px;
-        font-weight: 350;
-        color: var(--md-sys-color-on-background);
-        opacity: 0.9;
-        margin: 0;
-    }
-
-    h3 {
-        font-family: 'Figtree';
-        font-size: 18px;
-        font-weight: 300;
-        color: var(--md-sys-color-on-background);
-        opacity: 0.8;
-        margin: 0;
-        transition: all .1s ease-in-out;
-    }
-
-    h2:hover {
-        font-weight: 500;
-        opacity: 1;
-    }
-
-    hlink {
-        font-family: 'Figtree';
-        font-size: 18px;
-        font-weight: 300;
-        color: var(--md-sys-color-on-background);
-        opacity: 0;
-        margin: 0;
-        transition: all .2s ease-in-out;
-    }
-
-    h2 hlink {
-        font-family: 'Figtree';
-        font-size: 18px;
-        font-weight: 300;
-        color: var(--md-sys-color-on-background);
-        opacity: 0;
-        margin: 0;
-        transition: all .2s ease-in-out;
-    }
-
-    h2:hover {
-        font-weight: 500;
-        color: var(--md-sys-color-on-background);
-        opacity: 1;
-        margin: 0;
-        transition: all .2s ease-in-out;
-    }
-
-    h2:hover hlink {
-        font-weight: 500;
-        font-size: 18px;
-        color: var(--md-sys-color-on-background);
-        opacity: 0.5;
-        margin: 0;
-        transition: all .2s ease-in-out;
-    }
-
-    body {
-        height: 100vh;
-    }
-
-    .main {
-        display: flex;
-        padding: 0px;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-
-    .md-device-card[module="k60"] {
-        background: var(--md-sys-color-surface);
-        border-radius: 12px;
-        width: 300px;
-        height: 275px;
-        transition: all .1s ease-in-out;
-    }
-
-    img[module="k60"] {
-        background: var(--md-sys-color-on-primary-fixed-variant);
-        border-radius: 12px;
-        background-size: cover;
-        transition: all .1s ease-in-out;
-    }
-
-    .md-device-card[module="k60"]:hover {
-        background: var(--md-sys-color-on-primary-fixed-variant);
-        transition: all .1s ease-in-out;
-    }
-
-    .md-device-card[module="k60"]:hover img[module="k60"] {
-        background: url("./img/devices/redmi/k60_hovered.png");
-        background-size: cover;
-        transition: all .1s ease-in-out;
-    }
-
-    .moduleNameBox {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        padding: 12px 18px;
-    }
-
-    .moduleName {
-        font-family: 'SpaceGrotesk';
-        font-size: 18px;
-        font-weight: 400;
-        color: var(--md-sys-color-on-background);
-    }
-
-    .moduleCode {
-        font-family: 'Figtree';
-        font-size: 14px;
-        font-weight: 300;
-        background-color: var(--md-sys-color-on-primary);
-        color: var(--md-sys-color-primary);
-        padding: 4px 6px;
-        border-radius: 4px;
-    }
-
-    .md-chip-set {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 10px 18px;
-        align-items: center;
-    }
-
-    .md-device-card-box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 10px 18px;
-        align-items: center;
-    }
-</style>
 
 <body>
     <header>
@@ -206,36 +58,142 @@
     </header>
     <script src="../bundel.js"></script>
     <script type="module" src="../index.js"></script>
+
     <div class="main">
         <div class="titleBox">
-            <hlink>#</hlink>
             <h1>Devices</h1>
+            <p>Get the precompiled rom for your device.</p>
         </div>
-        <div id="popular-device">
-            <div class="titleBox">
-                <hlink>#</hlink>
-                <h2>Popular Devices</h2>
-            </div>
-        </div>
-        <div id="all-device">
-            <div class="titleBox">
-                <hlink>#</hlink>
-                <h2>All Devices</h2>
-            </div>
+    </div>
+    <script>
+        let mdecbm = document.getElementById('md-module-classify-box-main')
+        let mdecb = document.getElementById('md-module-classify-box')
+        window.addEventListener('scroll', function (e) {
+            if (window.pageYOffset > mdecb.offsetTop) {
+                mdecbm.style.position = 'fixed'
+                mdecbm.style.top = '50px'
+                mdecb.style.width = '512px'
+            } else {
+                mdecb.style.position = 'static'
+            }
+        })
+    </script>
+    <div id="md-module-classify-box-main">
+        <div id="md-module-classify-box">
+            <input type="radio" id="google" name="device-brand" class="device-input" checked>
+            <label for="google" id="radio">
+                <span class="md-module-classify" onclick="location.href='#xiaomi-device'">
+                    <span>Google</span>
+                </span>
+            </label>
 
-            <div class="md-chip-set">
-                <h3 id="dates-label">Brand</h3>
-                <md-filter-chip label="Xiaomi">Xiaomi</md-filter-chip>
-                <md-filter-chip label="Redmi">Redmi</md-filter-chip>
-                <md-filter-chip label="POCO">POCO</md-filter-chip>
-                <md-filter-chip label="Pixel">Pixel</md-filter-chip>
+            <input type="radio" id="oneplus" name="device-brand" class="device-input">
+            <label for="oneplus" id="radio">
+                <span class="md-module-classify" onclick="location.href='#redmi-device'">
+                    <span>OnePlus</span>
+                </span>
+            </label>
+
+            <input type="radio" id="poco" name="device-brand" class="device-input">
+            <label for="poco" id="radio">
+                <span class="md-module-classify" onclick="location.href='#redmi-device'">
+                    <span>POCO</span>
+                </span>
+            </label>
+
+            <input type="radio" id="realme" name="device-brand" class="device-input">
+            <label for="realme" id="radio">
+                <span class="md-module-classify" onclick="location.href='#redmi-device'">
+                    <span>Realme</span>
+                </span>
+            </label>
+
+            <input type="radio" id="redmi" name="device-brand" class="device-input">
+            <label for="redmi" id="radio">
+                <span class="md-module-classify" onclick="location.href='#redmi-device'">
+                    <span>Redmi</span>
+                </span>
+            </label>
+
+            <input type="radio" id="xiaomi" name="device-brand" class="device-input">
+            <label for="xiaomi" id="radio">
+                <span class="md-module-classify" onclick="location.href='#redmi-device'">
+                    <span>Xiaomi</span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="main">
+        <div id="all-device">
+            <div id="xiaomi-device" <div class="md-chip-set">
+                <div class="title">
+                    <h3>Xiaomi</h3>
+                    <p2>Get the precompiled rom for your device.</p2>
+                </div>
+                <div class="md-device-card-box">
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="md-device-card-box">
-                <div class="md-device-card" module="k60">
-                    <img module="k60" width="300px" src="./img/devices/redmi/k60.png"></img>
-                    <div class="moduleNameBox">
-                        <div class="moduleName">Redmi K60</div>
-                        <div class="moduleCode">Mondrian</div>
+            <div id="redmi-device" <div class="md-chip-set">
+                <div class="title">
+                    <h3>Redmi</h3>
+                    <p2>Get the precompiled rom for your device.</p2>
+                </div>
+                <div class="md-device-card-box">
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
+                    </div>
+                    <div class="md-device-card" module="k60">
+                        <img module="k60" width="300px" src="./img/devices/redmi/k60_hovered.png"></img>
+                        <div class="moduleNameBox">
+                            <div class="moduleName">Redmi K60 / POCO F5</div>
+                            <div class="moduleCode">MONDRIAN</div>
+                        </div>
                     </div>
                 </div>
             </div>
